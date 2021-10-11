@@ -1,21 +1,25 @@
-import Button from './lib/components/Button';
-import Badge from './lib/components/Badge';
+import {useState,useEffect} from 'react'
+import  Carousel from './lib/components/Carousel';
 import './App.css';
 
 function App() {
+  const [images, setImages] = useState();
+
+  useEffect(() => {
+    setImages(
+      Array.from(Array(20).keys()).map((id) => ({
+        id,
+        url: `https://picsum.photos/1000?random=${id}`
+      }))
+    );
+  }, []);
+
   return (
-    <div style={{ display:'flex', 
-              flexDirection:'column', 
-              alignItems:'start', 
-              justifyContent:'center', 
-              gap:'1.5rem', 
-              padding: '5rem' }}>
-      <p>Wow, look at this component library.</p>
-      <h5>A notification badge:</h5>
-        <Badge value={3}/>
-      <br/>
-     <h5>A button:</h5>
-        <Button label="Enter" kind="primary"/>
+    <div >
+
+        <Carousel images={images} />
+
+       
     </div>
   );
 }

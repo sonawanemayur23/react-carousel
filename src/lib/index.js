@@ -1,5 +1,3 @@
-import Badge from './components/Badge';
-import Button from './components/Button';
 
-export { Badge, 
-        Button }; 
+import Carousel from "./components/Carousel"
+export {Carousel }; 

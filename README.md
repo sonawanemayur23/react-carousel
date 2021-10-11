@@ -3,29 +3,19 @@
 
 ### Install
 
-Install using `npm install jawblia`
+Install using `npm install react-carousel-progressive`
 
 ### Usage 
 
-In a React app, use the Button or Badge components:  
-`import { Button } from 'jawblia'`  
-`import { Badge } from 'jawblia'` 
+In a React app, use the Carousel components:  
+`import { Carousel } from 'react-carousel-progressive'`  
 
-#### Button props
+#### Carousel props
 
 | Name        | Description      
 | ----------- | -----------      
-| kind        | 'Primary' | 'Outline' | 'Inline' | 'Ghost' | ' Warning'            
-| data-id     | string             
-| type        | 'button' | 'submit' | 'reset'             
-| name        | string             
-| value       | string             
-| disabled    | Boolean          
-| onClick     | function         
+| images      | object `{ id: number|string,url:"imageUrl"}`        
+| height      | string 
+| width       | string     
 
 
-#### Badge props
-
-| Name        | Description | 
-| ----------- | ----------- |
-| value       | integer     |
